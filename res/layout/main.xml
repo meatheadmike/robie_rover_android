@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <FrameLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.camera.simplemjpeg.MjpegView
+            android:id="@+id/mv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="59dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/debug_text"
+                android:id="@+id/debug_text" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="16dp"
+            android:weightSum="1"
+            android:layout_gravity="bottom">
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/rove_button_on"
+                android:textOff="@string/rove_button_off"
+                android:id="@+id/rove_button"
+                android:layout_gravity="start"
+                android:onClick="onRoveClicked"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingRight="16dp"
+            android:weightSum="1"
+            android:layout_gravity="bottom">
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/spin_button_on"
+                android:textOff="@string/spin_button_off"
+                android:id="@+id/spin_button"
+                android:layout_gravity="end"
+                android:onClick="onSpinClicked"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
